@@ -2,23 +2,132 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Module 5 Project</title>
+<style>
+	table, th, td {
+		border-style: dotted;
+		border-collapse: collapse;
+	}
+	tr:nth-child(odd){
+		background-color: rgba(100,223,106,1.00)
+	}
+	.container{
+		width: 100%;
+		overflow: auto;
+	}
+	.container div{
+		width: 33%;
+		float: left;
+	}
+	</style>
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-	<table>
-		<caption>Vacation Planning</caption>
-		<tr><th>Destination</th>
-			<th>Main Attraction</th>
-			<th>Website</th>
-			<th>Cost per Person</th>
+	<nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+<main>
+	<table style="width: 100%">
+		<caption><h1>Favorites</h1></caption>
+		<tr>
+			<th>Name</th>
+			<th>Color</th>
+			<th>Food</th>
+			<th>Animal</th>
+		</tr>
+		<tr>
+			<td>Mandy</td>
+			<td>Blue</td>
+			<td>Pizza</td>
+			<td>Cat</td>
+		</tr>
+		<tr>
+			<td>Steve</td>
+			<td>Red</td>
+			<td>Hamburger</td>
+			<td>Dog</td>
+		</tr>
+		<tr>
+			<td>Clarissa</td>
+			<td>Red</td>
+			<td>Tacos</td>
+			<td>Rabbit</td>
+		</tr>
+		<tr>
+			<td>Judy</td>
+			<td>Yellow</td>
+			<td>Hamburger</td>
+			<td>Cat</td>
+		</tr>
+		<tr>
+			<td>Daniel</td>
+			<td>Blue</td>
+			<td>Spaghetti</td>
+			<td>Cat</td>
+		</tr>
+		<tr>
+			<td>Carey</td>
+			<td>Blue</td>
+			<td>Pizza</td>
+			<td>Dog</td>
+		</tr>
+		<tr>
+			<td>George</td>
+			<td>Blue</td>
+			<td>Hamburger</td>
+			<td>Cat</td>
 		</tr>
 	</table>
 	
-	<ul>
-		<li>Disney World</li>
-		<li>Sea World</li>
-		<li>Gettysburg</li>
-	</ul>
+<div class="container">
+	<div>
+	<h2>Top Favorite Colors</h2>	
+		<ol>
+			<li>Blue &#9757</li>
+			<li>Red &#9996</li>
+			<li>Yellow &#128540</li>
+		</ol>
+	</div>
+	
+	<div>
+	<h2>Top Favorite Animals</h2>
+		<ol>
+			<li>Cat &#9757</li>
+			<li>Dog &#9996</li>
+			<li>Rabbit &#128540</li>
+		</ol>
+	</div>
+	
+	<div>
+		<iframe src="iframe_example.html" height="200" width="150"></iframe>
+	</div>
+</div>
+	
+<div>
+	<h1 id="mytext">Click the button to change the color of this text!</h1>
+	<button onClick="changeColor()">Change Color</button>
+	
+	<script>
+		function changeColor() {
+			const text = document.getElementById("mytext");
+			const colors = ["red", "blue", "green", "purple", "orange", "teal"];
+			const randomColor = colors[Math.floor(Math.random() * colors.length)];
+			text.style.color = randomColor;
+		}
+	</script>
+</div>
+</main>
+	
+<footer>
+    <p>&copy; 2025 Jennifer Salinas</p>
+  </footer>
+
 </body>
 </html>
